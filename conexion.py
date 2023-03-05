@@ -1,4 +1,4 @@
-import psycopg2 as pg
+import psycopg2 as bd
 import sys
 from logger_base import log
 
@@ -15,12 +15,12 @@ class Conexion:
   def obtenerConexion(cls):
     if cls._conexion is None:
       try:
-        cls._conexion(
-          host=_HOST,
-          user=_USERNAME,
-          password=_PASSWORD,
-          port=_PORT,
-          database=_DATABASE
+        cls._conexion = bd.connet(
+          host=cls._HOST,
+          user=cls._USERNAME,
+          password=cls._PASSWORD,
+          port=cls._PORT,
+          database=cls._DATABASE
         )
         log.debug(f'Conexion exitosa: {cls._conexion}')
         return cls._conexion
@@ -43,10 +43,6 @@ class Conexion:
     else:
       return cls._cursor
       
-  @classmethod
-  def cerrar(cls):
-    pass
-
 
 if __name__ == '__main__':
   Conexion.obtenerConexion()
