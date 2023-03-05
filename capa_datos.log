@@ -1,0 +1,12 @@
+28-02-2023 03:59:42 PM: DEBUG [persona.py:49 
+      ID persona: 1 Nombre: Roberto
+      Apellido: Lopez Email: rlopez@mail.com
+    ]
+28-02-2023 04:00:16 PM: DEBUG [persona.py:49 
+      ID persona: 1 Nombre: Roberto
+      Apellido: Lopez Email: rlopez@mail.com
+    ]
+28-02-2023 04:00:16 PM: DEBUG [persona.py:53 
+      ID persona: None Nombre: Sara
+      Apellido: Connor Email: sconnor@mail.com
+    ]
