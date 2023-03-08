@@ -3,10 +3,10 @@ import sys
 from logger_base import log
 
 class Conexion:
-  _DATABASE = 'test-db'
+  _DATABASE = 'test-bd'
   _USERNAME = 'postgres'
   _PASSWORD = '1234'
-  _PORT = '5342'
+  _PORT = '5432'
   _HOST = '127.0.0.1'
   _conexion = None
   _cursor = None
@@ -15,7 +15,7 @@ class Conexion:
   def obtenerConexion(cls):
     if cls._conexion is None:
       try:
-        cls._conexion = bd.connet(
+        cls._conexion = bd.connect(
           host=cls._HOST,
           user=cls._USERNAME,
           password=cls._PASSWORD,
